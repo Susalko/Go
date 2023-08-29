@@ -9,12 +9,12 @@ func main() {
 	cashe := cashe.New()
 
 	cashe.Set("userId", 42)
-	userId := cashe.Get("userId")
+	userId, _ := cashe.Get("userId")
 
 	fmt.Println(userId)
 
 	cashe.Delete("userId")
-	userId = cashe.Get("userId")
+	userId, _ = cashe.Get("userId")
 
 	fmt.Println(userId)
 
